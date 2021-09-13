@@ -1,0 +1,443 @@
+/*a CSS file. hurray.*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:  roboto;
+}
+
+/*body {
+	background-color: #FFFADA;
+}*/
+
+h1 {
+	font-size: 3em;
+}
+
+h2{
+	font-size: 2em;
+}
+
+p {
+	font-size: 1em;
+	margin: 1em 0;
+}
+
+div p {
+	font-size: 1.5em;
+}
+
+textarea {
+	width: 100%;
+	height: 50px;
+}
+
+.appContainer {
+	position: relative;
+	width: 100%;
+	/*padding: 0.5em;*/
+	margin: 0 auto;
+	/*border: 10px solid #FFFADA;*/
+	border-radius: 5px;
+}
+
+.app-header {
+	background-color: #8CE68F;
+	color: rgb(40,40,40);
+	padding: 2em 0.5em;
+}
+
+/*.app-header h1 {
+	border-bottom: 2px solid white;
+}*/
+.app-header p {
+	font-size: 1.25em;
+}
+
+/* style current dialogue/saved dialogue toggle*/
+
+
+button {
+	font-weight: bold;
+}
+.app-view-toggles {
+	padding: 0.5em 0.5em;
+	background-color: white;
+	/*border: 2px solid #8CE68F;*/
+}
+
+/*.view-toggle-button-wrapper {
+	border: 2px solid #8CE68F;
+}*/
+
+.view-toggle-button {
+	font-weight: bold;
+	font-size: 1.1em;
+	width: 50%;
+	height: 50px;
+	background-color: white;
+	border: 2px solid #8CE68F;
+}
+
+.view-toggle-button-selected {
+	font-weight: bold;
+	font-size: 1.1em;
+	width: 50%;
+	height: 50px;
+	background-color: #8CE68F;
+	border: none;
+}
+
+@media (hover: hover) {
+	.view-toggle-button:hover {
+		background-color: #8CE68F;
+	}
+}
+
+.view-toggle-button:active {
+	background-color: #79D47C;
+}
+
+/* style saved dialogues list UI  */
+
+.saved-dialogue-list {
+	padding: 0.5em;
+	background-color: white;
+	/*margin: 1em	2em	0;
+	padding: 1em;*/
+}
+
+.saved-dialogue-list h2 {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 2px solid black;
+}
+
+.saved-dialogue-list-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid grey;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.saved-dialogue-list-item p {
+	font-size: 1.2em;
+	text-overflow: ellipsis;
+}
+
+.saved-dialogue-list-load-button {
+	border: none;
+	background-color: #8CE68F;
+	padding: 0.5em;
+	margin-right: 0.25em;
+	border-radius: 5px;
+	height: 40px;
+	width: 50px;
+}
+
+.saved-dialogue-list-delete-button {
+	border: none;
+	background-color: #E68C8C;
+	padding: 0.5em;
+	border-radius: 5px;
+	height: 40px;
+	width: 50px;
+
+}
+
+/* style write current dialogue UI */
+
+.dialogue-writing-container {
+	margin-top: 2em;
+}
+
+.dialogue-writing-container label {
+	font-size: 24px;
+	font-weight: bold;
+	width: 100%;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 2px solid black;
+}
+
+.dialogue-writing-container input {
+	font-size: 24px;
+	width: 100%;
+	height: 50px;
+	border: none;
+	margin-left: 0.5em;
+
+}
+
+/* style the dialogue title input */
+
+.dialogue-title-container {
+	margin-top: 1em;
+	font-size: 1.5em;
+}
+
+.dialogue-title-container input {
+	width: 100%;
+	height: 1.25em;
+	font-size: 1.25em;
+}
+
+/*.dialogue-section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: right;
+}*/
+
+/* style the dialogue text inputs */
+.dialogue-inputs-container {
+	padding: 0.5em 0.5em;
+	background-color: white;
+}
+
+.dialogue-inputs-container h2 {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 2px solid black;
+}
+
+.dialogue-inputs-container p {
+	margin-bottom: 0;
+}
+
+.speaker-inputs {
+	display: flex;
+}
+
+.speaker-input-textarea {
+	font-size: 1.5em;
+}
+
+.speaker-input-button {
+	width: 20%;
+}
+
+
+.dialogue-section {
+	padding: 0.5em;
+	background-color: white;
+}
+
+/* style the save dialogue and clear dialogue buttons */
+
+.save-button-container {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+	align-items: right;
+}
+
+.save-button {
+	position:  relative;
+	height: 30px;
+}
+
+.dialogue-text {
+	width: 100%;
+	min-height: 50px;
+	max-height: 500px;
+	overflow-y: scroll;
+	padding: 0.5em 0.5em 0;
+	background-color: #FFFADA;
+	box-shadow: inset 0.2em 0.2em 2px rgba(240,240,240,0.8),
+				inset -0.2em -0.2em 2px rgba(240,240,240,0.8);
+
+}
+
+.dialogue-line {
+	display: flex;
+	width: 100%;
+}
+
+.dialogue-line p {
+	margin: 0 0 0.5em;
+	min-height: 1.5em;
+}
+
+.dialogue-sentence {
+	padding-left: 0.5em;
+}
+
+/* hover specific media queries */
+
+@media (min-width: 500px) {
+	.app-header {
+		padding: 2em 2em;
+	}
+
+	.app-view-toggles {
+		padding: 1em 2em;
+	}
+
+	.saved-dialogue-list {
+		padding: 1em 2em ;
+	}
+
+	.dialogue-inputs-container {
+		padding: 1em 2em;
+	}
+
+	.dialogue-section {
+		padding: 1em 2em;
+	}
+}
+
+@media (min-width: 600px) {
+	.appContainer {
+		/*width: 80%;*/
+		/*margin: 2em auto;*/
+	}
+
+	.app-header {
+		padding: 2em 8em;
+	}
+
+	.app-view-toggles {
+		padding: 1em 8em;
+	}
+
+	.saved-dialogue-list {
+		padding: 1em 8em;
+	}
+
+	.dialogue-inputs-container {
+		padding: 1em 8em;
+	}
+
+	.dialogue-section {
+		padding: 1em 8em;
+	}
+}
+
+@media (min-width:  800px) {
+	.appContainer {
+		/*width: 60%;*/
+	}
+
+	.app-header {
+		padding: 2em 12em;
+	}
+
+	.app-view-toggles {
+		padding: 1em 12em;
+	}
+
+	.saved-dialogue-list {
+		padding: 1em 12em;
+	}
+
+	.dialogue-inputs-container {
+		padding: 1em 12em;
+	}
+
+	.dialogue-section {
+		padding: 1em 12em;
+	}
+}
+
+@media (min-width:  1000px) {
+	.appContainer {
+		/*width: 60%;*/
+	}
+
+	.app-header {
+		padding: 2em 15em;
+	}
+
+	.app-view-toggles {
+		padding: 1em 15em;
+	}
+
+	.saved-dialogue-list {
+		padding: 1em 15em;
+	}
+
+	.dialogue-inputs-container {
+		padding: 1em 15em;
+	}
+
+	.dialogue-section {
+		padding: 1em 15em;
+	}
+}
+
+@media (min-width:  1600px) {
+	.appContainer {
+		/*width: 60%;*/
+	}
+
+	.app-header {
+		padding: 2em 20em;
+	}
+
+	.app-view-toggles {
+		padding: 1em 20em;
+	}
+
+	.saved-dialogue-list {
+		padding: 1em 20em;
+	}
+
+	.dialogue-inputs-container {
+		padding: 1em 20em;
+	}
+
+	.dialogue-section {
+		padding: 1em 20em;
+	}
+}
+
+@media (min-width:  2000px) {
+	.appContainer {
+		/*width: 60%;*/
+	}
+
+	.app-header {
+		padding: 2em 40em;
+	}
+
+	.app-view-toggles {
+		padding: 1em 40em;
+	}
+
+	.saved-dialogue-list {
+		padding: 1em 40em;
+	}
+
+	.dialogue-inputs-container {
+		padding: 1em 40em;
+	}
+
+	.dialogue-section {
+		padding: 1em 40em;
+	}
+}
+
+@media (hover: hover) {
+
+	/*.view-toggle-button:hover {
+		background-color: #FFFF99;
+	}*/
+
+	.saved-dialogue-list-load-button:hover {
+		pointer: pointer;
+		background-color: #1EEE25;	
+	}
+
+	.saved-dialogue-list-delete-button:hover {
+		pointer: pointer;
+		background-color: #EC2525;
+	}
+}
